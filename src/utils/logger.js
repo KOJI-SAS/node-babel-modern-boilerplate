@@ -11,7 +11,7 @@ const LOG_FORMAT = winston.format.combine(
     label: process.env.APP_NAME,
   }),
   winston.format.printf(({ timestamp, label, level, message, stack }) => {
-    let result = `${timestamp} - ${label}:[${level}]: ${message}`;
+    let result = `${timestamp} [${level}] ${label}: ${message}`;
     if (stack) {
       result += `\n${stack}`;
     }
