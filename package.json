@@ -1,0 +1,52 @@
+{
+  "name": "node-babel-modern-boilerplate",
+  "version": "0.0.1-SNAPSHOT",
+  "description": "A boilerplate for Node.js apps working with Babel, ESLint, Prettier, Config, Winston",
+  "main": "dist/index.js",
+  "author": {
+    "name": "De Oliveira Tristan",
+    "email": "tristan@koji.fr",
+    "url": "https://koji.fr/"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --exec babel-node -r node_modules/dotenv/config src/index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "clean": "rimraf build",
+    "clean:logs": "rimraf logs",
+    "prebuild": "yarn clean",
+    "build": "babel src -d dist",
+    "serve": "node -r dotenv/config dist/index.js",
+    "preinstall": "node scripts/preinstall.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "bluebird": "^3.7.1",
+    "config": "^3.2.3",
+    "dotenv": "^8.2.0",
+    "winston": "^3.2.1"
+  }
+}

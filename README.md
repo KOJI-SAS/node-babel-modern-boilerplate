@@ -2,6 +2,8 @@
 
 A boilerplate for Node.js apps working with Babel, ESLint, Prettier, Config, Winston
 
+> For github users you can use the new template system to fork this boilerplate
+
 ## Running Locally
 
 Make sure you have [Node.js](http://nodejs.org/) and the [Yarn](https://yarnpkg.com/) installed.
