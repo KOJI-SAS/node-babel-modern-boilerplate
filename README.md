@@ -11,7 +11,7 @@ Make sure you have [Node.js](http://nodejs.org/) and the [Yarn](https://yarnpkg.
 ```sh
 $ git clone https://github.com/KOJI-SAS/node-babel-modern-boilerplate.git # or clone your own fork
 $ cd node-babel-modern-boilerplate
-$ cp .env.dist .end
+$ cp .env.dist .env
 $ yarn
 $ yarn dev
 ```
